@@ -1,5 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2022/5/21 16:52
+# @Author  : mgisr
+# @Site    :
+# @File    : mnist_format.py
+# @Software: PyCharm
+
+
+import gzip
+import os
+import pickle
+
 import numpy as np
-import os, gzip, pickle
 
 
 def load_mnist(data_file, label_file):
