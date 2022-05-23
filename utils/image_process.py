@@ -7,8 +7,8 @@
 # @Software: PyCharm
 
 import numpy as np
-from PIL import Image
-from PIL import ImageDraw
+import cv2
+from matplotlib import pyplot as plt
 
 
 def normal(data, val):
@@ -41,7 +41,8 @@ def callout(img, label):
     :return: 标注后的图片
     """
 
-    img = Image.fromarray(img, 'L')
-    draw = ImageDraw.Draw(img)
-    draw.text((img.size[0], img.size[1] - 50), label, (255, 0, 0))
-    return img
+    t = np.array(img)
+    plt.imshow(t)
+    plt.text(5, 5, str(label), fontsize=60, color='r')
+
+    return t
